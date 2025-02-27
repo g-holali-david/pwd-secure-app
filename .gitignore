@@ -1,0 +1,28 @@
+# Environnements virtuels
+venv/
+.env
+*.pyc
+__pycache__/
+instance/
+
+# Configurations sensibles
+config.py
+*.log
+
+# Cache et fichiers temporaires
+*.sqlite3
+.DS_Store
+*.swp
+*.swo
+
+# Dépendances
+*.egg-info/
+pip-log.txt
+
+# VS Code & IDEs
+.vscode/
+.idea/
+*.iml
+
+# Docker (si utilisé)
+docker-compose.override.yml
