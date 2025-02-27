@@ -6,7 +6,7 @@ __pycache__/
 instance/
 
 # Configurations sensibles
-config.py
+config.py.bat
 *.log
 
 # Cache et fichiers temporaires
