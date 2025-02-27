@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, redirect, session, flash, jsonify
 from utils import redis_client, hash_password, verify_password
 from config import Config
+import os
+
+PORT = int(os.getenv("PORT", 5000)) 
 
 app = Flask(__name__)
 app.config.from_object(Config)  # Charge la configuration
@@ -73,4 +76,4 @@ def logout():
     return redirect('/login')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=PORT, debug=True)
