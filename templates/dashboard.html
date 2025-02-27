@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Tableau de bord</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Dashboard</a>
+            <a href="/logout" class="btn btn-danger">Déconnexion</a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Bienvenue, {{ username }} 👋</h2>
+        <p class="text-center text-muted">Connecté depuis l’IP : <strong>{{ ip }}</strong></p>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">Utilisateurs</div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ total_users }}</h5>
+                        <p class="card-text">Total d'utilisateurs inscrits</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-header">Statut</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Connecté</h5>
+                        <p class="card-text">Vous êtes actuellement connecté.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-white bg-warning mb-3">
+                    <div class="card-header">Sécurité</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Hachage sécurisé</h5>
+                        <p class="card-text">Vos informations sont protégées.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="/logout" class="btn btn-danger mt-3">Se déconnecter</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
